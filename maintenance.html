@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA - Maintenance Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-card">
+
+        <h1>📅 NOVA Maintenance Planner</h1>
+
+        <h3>🤖 Let's plan your next vehicle maintenance.</h3>
+
+        <label>🚗 Car Model</label><br>
+        <input type="text" id="maintenanceCar"
+               placeholder="Example: Hyundai i20">
+
+        <br><br>
+
+        <label>🛣️ Current Kilometres</label><br>
+        <input type="number" id="maintenanceKm"
+               placeholder="Example: 35000">
+
+        <br><br>
+
+        <label>🔧 Last Service Date</label><br>
+        <input type="date" id="serviceDate">
+
+        <br><br>
+
+        <button onclick="createMaintenancePlan()">
+            🤖 Create Maintenance Plan
+        </button>
+
+    </div>
+
+
+    <div class="dashboard-card" id="maintenanceResult"
+         style="display:none;">
+
+        <h2>🤖 NOVA Maintenance Plan</h2>
+
+        <p id="maintenanceInfo"></p>
+
+        <hr>
+
+        <h3>📌 Next Recommended Action</h3>
+
+        <p id="nextAction"></p>
+
+        <h3>💡 NOVA Advice</h3>
+
+        <p id="maintenanceAdvice"></p>
+
+        <br>
+
+        <button onclick="window.location.href='booking.html'">
+            🚗 Book Service
+        </button>
+
+        <button onclick="window.location.href='dashboard.html'">
+            ⬅ Back to Dashboard
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

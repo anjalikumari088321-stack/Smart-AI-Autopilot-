@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Login</h2>
+
+<form onsubmit="loginUser(event)">
+    <input type="text" id="username" placeholder="Username" required><br><br>
+
+    <input type="password" id="password" placeholder="Password" required><br><br>
+
+    <button type="submit">Login</button>
+</form>
+
+<script>
+function loginUser(event){
+    event.preventDefault();
+
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if(user=="admin" && pass=="1234"){
+        alert("Login Successful!");
+        window.location.href="dashboard.html";
+    }
+    else{
+        alert("Invalid Username or Password");
+    }
+}
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>

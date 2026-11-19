@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart AI Autopilot - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🚗 Smart AI Autopilot</h1>
+
+    <!-- NOVA Welcome -->
+    <div class="dashboard-card">
+        <h2>🤖 Hello, Anjali!</h2>
+        <h3>I'm NOVA — Your Personal Vehicle Maintenance Assistant.</h3>
+        <p>
+            I can help you understand your car problems,
+            check maintenance needs and plan your next service.
+        </p>
+        <p><b>Status:</b> 🟢 NOVA Online</p>
+    </div>
+
+    <!-- Vehicle Information -->
+    <div class="dashboard-card">
+        <h2>🚘 My Vehicle</h2>
+        <p><b>Vehicle:</b> Hyundai i20</p>
+        <p><b>Last Service:</b> General Service</p>
+        <p><b>Maintenance:</b> 🟢 Regular Check Recommended</p>
+
+        <a href="profile.html">
+            <button>View My Vehicle</button>
+        </a>
+    </div>
+
+    <!-- Vehicle Health -->
+    <div class="dashboard-card">
+        <h2>❤️ Vehicle Health</h2>
+        <p>Check your vehicle's basic maintenance status.</p>
+
+        <a href="health.html">
+            <button>🔍 Check Vehicle Health</button>
+        </a>
+    </div>
+
+    <!-- Ask NOVA -->
+    <div class="dashboard-card">
+        <h2>💬 Ask NOVA</h2>
+        <p>
+            Tell NOVA what problem you are facing with your car.
+        </p>
+
+        <a href="chatbot.html">
+            <button>🤖 Talk to NOVA</button>
+        </a>
+    </div>
+
+    <!-- Maintenance Planner -->
+    <div class="dashboard-card">
+        <h2>📅 Maintenance Planner</h2>
+        <p><b>Last Service:</b> General Service</p>
+        <p><b>Next Action:</b> General Vehicle Inspection</p>
+
+        <a href="history.html">
+            <button>View Service History</button>
+        </a>
+    </div>
+    <a href="maintenance.html">
+    <button>📅 Open Maintenance Planner</button>
+</a><!-- Car Breakdown Help -->
+
+<div class="dashboard-card">
+
+    <h2>🆘 Car Breakdown Help</h2>
+
+    <p>
+        Car suddenly breaks down?
+        Let NOVA guide you through a quick assessment.
+    </p>
+
+    <a href="breakdown.html">
+        <button>🆘 Get Breakdown Help</button>
+    </a>
+
+</div>
+    
+
+    <!-- Booking -->
+    <div class="dashboard-card">
+        <h2>🔧 Service Management</h2>
+        <p><b>Total Bookings:</b> <span id="bookingCount">5 Bookings</span></p>
+        <p><b>Pending Services:</b> 2 Vehicles</p>
+
+        <a href="booking.html">
+            <button>📅 Book New Service</button>
+        </a>
+
+        <a href="history.html">
+            <button>📋 Booking History</button>
+        </a>
+    </div>
+
+    <!-- Other Features -->
+    <div class="dashboard-card">
+        <h2>⚙️ More Options</h2>
+
+        <a href="services.html">
+            <button>🔧 Our Services</button>
+        </a>
+
+        <a href="feedback.html">
+            <button>💬 Give Feedback</button>
+        </a>
+
+        <a href="rating.html">
+            <button>⭐ Rate Service</button>
+        </a>
+    </div>
+
+    <!-- Logout -->
+    <div class="dashboard-card">
+        <button onclick="logout()">🚪 Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

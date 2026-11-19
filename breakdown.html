@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA - Car Breakdown Help</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard-card">
+
+    <h1>🆘 Car Breakdown Help</h1>
+
+    <h3>🤖 NOVA Emergency Assistant</h3>
+
+    <p>
+        Is your car having trouble on the road?
+        Answer a few quick questions and NOVA will
+        suggest a possible problem area and a safe next step.
+    </p>
+
+    <hr>
+
+    <label>🚗 Is your car starting?</label><br>
+
+    <select id="starting">
+        <option value="">Select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+
+    <br><br>
+
+    <label>⚠️ Is any warning light visible?</label><br>
+
+    <select id="warning">
+        <option value="">Select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+
+    <br><br>
+
+    <label>🔊 Is there an unusual sound?</label><br>
+
+    <select id="sound">
+        <option value="">Select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+
+    <br><br>
+
+    <label>🌡️ Is the car overheating?</label><br>
+
+    <select id="overheating">
+        <option value="">Select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="analyzeBreakdown()">
+        🤖 Ask NOVA
+    </button>
+
+</div>
+
+
+<!-- NOVA RESULT -->
+
+<div class="dashboard-card" id="breakdownResult" style="display:none;">
+
+    <h2>🤖 NOVA Breakdown Analysis</h2>
+
+    <p id="breakdownProblem"></p>
+
+    <h3>💡 Recommended Action</h3>
+
+    <p id="breakdownAdvice"></p>
+
+    <h3>🛠️ Next Step</h3>
+
+    <p id="breakdownNext"></p>
+
+    <br>
+
+    <button onclick="window.location.href='booking.html'">
+        🚗 Book Service
+    </button>
+
+    <button onclick="window.location.href='dashboard.html'">
+        ⬅ Back to Dashboard
+    </button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

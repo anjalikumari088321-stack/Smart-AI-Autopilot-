@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA AI Assistant | Smart AI AutoPilot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <div class="chat-header">
+        <div class="nova-avatar">🤖</div>
+        <h2>NOVA AI Assistant</h2>
+        <p>Your Smart Vehicle Maintenance Partner</p>
+        <span class="online-status">🟢 Online & Ready to Help</span>
+    </div>
+
+    <div class="chat-box" id="chatBox">
+
+        <div class="ai-message">
+            <b>🤖 NOVA</b>
+            <p>Hello! Welcome to Smart AI AutoPilot.</p>
+            <p>I'm NOVA, your vehicle maintenance assistant. Tell me about your car problem and I'll suggest a possible problem area and recommended service.</p>
+        </div>
+
+        <div class="ai-message">
+            <b>💡 Try asking me about:</b>
+            <p>⚙️ Engine problems</p>
+            <p>🔋 Battery issues</p>
+            <p>🛑 Brake problems</p>
+            <p>🛢️ Oil change</p>
+            <p>🛞 Tyre problems</p>
+            <p>🌡️ Overheating</p>
+        </div>
+
+    </div>
+
+    <div class="chat-input">
+
+        <input
+            type="text"
+            id="userInput"
+            placeholder="Describe your car problem..."
+            onkeypress="if(event.key === 'Enter') sendMessage()"
+        >
+
+        <button onclick="sendMessage()">➤ Send</button>
+
+    </div>
+
+    <div class="chat-actions">
+
+        <button onclick="window.location.href='booking.html'">
+            🚗 Book a Service
+        </button>
+
+        <button onclick="window.location.href='dashboard.html'">
+            ⬅ Dashboard
+        </button>
+
+    </div>
+
+    <p class="nova-note">
+        NOVA provides basic guidance. Final diagnosis requires a qualified technician.
+    </p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

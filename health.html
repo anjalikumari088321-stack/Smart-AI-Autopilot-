@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA - Vehicle Health</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-card">
+
+        <h1>❤️ Vehicle Health Check</h1>
+
+        <p>
+            🤖 NOVA will check your vehicle information
+            and provide basic maintenance guidance.
+        </p>
+
+        <label>🚗 Car Model</label><br>
+        <input type="text" id="carModel" placeholder="Example: Hyundai i20">
+
+        <br><br>
+
+        <label>📅 Manufacturing Year</label><br>
+        <input type="number" id="carYear" placeholder="Example: 2022">
+
+        <br><br>
+
+        <label>🛣️ Current Kilometres</label><br>
+        <input type="number" id="carKm" placeholder="Example: 35000">
+
+        <br><br>
+
+        <label>🔧 Last Service</label><br>
+        <input type="date" id="lastService">
+
+        <br><br>
+
+        <button onclick="checkVehicleHealth()">
+            🔍 Check Vehicle Health
+        </button>
+
+    </div>
+
+
+    <!-- Result -->
+
+    <div class="dashboard-card" id="healthResult" style="display:none;">
+
+        <h2>🤖 NOVA Vehicle Report</h2>
+
+        <p id="vehicleInfo"></p>
+
+        <hr>
+
+        <h3>📊 Maintenance Status</h3>
+
+        <p id="healthStatus"></p>
+
+        <h3>💡 NOVA Recommendation</h3>
+
+        <p id="novaAdvice"></p>
+
+        <br>
+
+        <button onclick="window.location.href='booking.html'">
+            🚗 Book Service
+        </button>
+
+        <button onclick="window.location.href='dashboard.html'">
+            ⬅ Back to Dashboard
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

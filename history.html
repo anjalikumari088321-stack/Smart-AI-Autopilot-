@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA - Service History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-card">
+
+        <h1>📋 Vehicle Service History</h1>
+        <h3>🤖 NOVA Service Records</h3>
+
+        <p>Here you can view your previous service bookings.</p>
+
+        <div style="overflow-x:auto;">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <th>Customer</th>
+                        <th>Mobile</th>
+                        <th>Vehicle</th>
+                        <th>Service</th>
+                        <th>Booking Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="historyTable">
+                </tbody>
+            </table>
+        </div>
+
+        <p id="emptyMessage" style="display:none;">
+            No booking records found. Please book a service first.
+        </p>
+
+        <br>
+
+        <a href="booking.html">
+            <button>🚗 Book New Service</button>
+        </a>
+
+        <a href="maintenance.html">
+            <button>📅 Maintenance Planner</button>
+        </a>
+
+        <a href="dashboard.html">
+            <button>⬅ Dashboard</button>
+        </a>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        function displayBookingHistory() {
+
+            const bookings = JSON.parse(
+                localStorage.getItem("serviceBookings") || "[]"
+            );
+
+            const table = document.getElementById("historyTable");
+            const emptyMessage = document.getElementById("emptyMessage");
+
+            table.innerHTML = "";
+
+            if (bookings.length === 0) {
+                emptyMessage.style.display = "block";
+                return;
+            }
+
+            emptyMessage.style.display = "none";
+
+            bookings.forEach(function(booking) {
+
+                const row = document.createElement("tr");
+
+                const mobile = String(booking.mobile || "");
+                const maskedMobile = mobile.length >= 4
+                    ? "******" + mobile.slice(-4)
+                    : "Hidden";
+
+                const details = [
+                    booking.name,
+                    maskedMobile,
+                    booking.car,
+                    booking.service,
+                    booking.date,
+                    "⏳ Booking Received"
+                ];
+
+                details.forEach(function(detail) {
+                    const cell = document.createElement("td");
+                    cell.textContent = detail || "-";
+                    row.appendChild(cell);
+                });
+
+                table.appendChild(row);
+            });
+        }
+
+        displayBookingHistory();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Car Service | Smart AI AutoPilot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Book Your Car Service</h2>
+    <p>Schedule your car service with Smart AI AutoPilot</p>
+
+    <form class="booking-form" onsubmit="bookService(event)">
+
+        <label for="customerName">Your Name</label>
+        <input type="text" id="customerName"
+               name="customerName"
+               placeholder="Enter your name" required>
+
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mobile"
+               name="mobile"
+               placeholder="Enter mobile number"
+               required>
+
+        <label for="carModel">Car Model</label>
+        <input type="text" id="carModel"
+               name="carModel"
+               placeholder="e.g. Swift, Baleno, Creta"
+               required>
+
+        <label for="bookingDate">Booking Date</label>
+        <input type="date" id="bookingDate"
+               name="bookingDate" required>
+
+        <label for="serviceType">Select Service</label>
+        <select id="serviceType" name="serviceType" required>
+            <option value="">Choose a Service</option>
+            <option value="Oil Change">Oil Change</option>
+            <option value="Engine Repair">Engine Repair</option>
+            <option value="Brake Inspection">Brake Inspection</option>
+            <option value="Battery Check">Battery Check</option>
+            <option value="Tyre Inspection">Tyre & Wheel Inspection</option>
+            <option value="Cooling System">Cooling System Inspection</option>
+            <option value="Car Wash">Car Wash</option>
+            <option value="General Service">General Service</option>
+        </select>
+
+        <button type="submit">Book Now</button>
+
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
